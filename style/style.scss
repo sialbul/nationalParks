@@ -1,0 +1,28 @@
+@import "_variable";
+*{
+    margin :0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd, #3bd4b7, #32c785, #4cb648);
+}
+
+.navbar{
+    font-family: 'didact_gothicregular', Arial, sans-serif;;
+    background-color: $darkblue;
+    padding: 5px;
+    color:$lightblue;
+   
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        align-items: center;
+
+  }
+    img{
+        width: 15vh;
+        height: 15vh;
+    }
+}
