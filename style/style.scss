@@ -1,4 +1,6 @@
 @import "_variable";
+@import "_header";
+@import "_footer";
 *{
     margin :0;
     padding:0;
@@ -9,64 +11,10 @@ body{
     background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd);
 }
 
-.navbar{
-    background-color: $darkblue;
-    padding: 5px;
-    color:$lightblue;
-    border-bottom: 2px solid $lightblue;
-    position: fixed;
-    width: 100%;
-   
-    ul {
-        display: flex;
-        justify-content: space-around;
-        list-style-type: none;
-        align-items: center;
-
-  }
-   
-}
-
-#logo{
-    width: 15vh;
-    height: 15vh;
-    
-}
-
-#logoFooter{
-    width: 8vh;
-    height: 8vh;
-}
-section{
+#topSection{
     min-height: 100vh;
+    background-image: url("../img/california.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
-}
-
-footer{
-    background-color: $darkblue;
-    color:$lightblue;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    align-items: center;
-    text-align: center;
-    border-top: 2px solid $lightblue;
-
-}
-
-#footerCopyRight{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-#footerRights{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-#footerTitle{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    display:flex;
-}
-#footerSocial{
-    grid-column-start: 4;
-    grid-column-end: 5;
 }

@@ -1,0 +1,41 @@
+
+footer{
+    background-color: $darkblue;
+    color:$lightblue;
+    padding: 15px 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid $lightblue;
+
+}
+#logoFooter{
+    width: 8vh;
+    height: 8vh;
+}
+#footerCopyRight{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#footerRights{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#footerTitle{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display:flex;
+    img{
+        margin-right: 15px;
+    }
+}
+#footerSocial{
+    grid-column-start: 3;
+    grid-column-end: 4;
+i{
+    margin-right: 10px;
+}
+
+
+}

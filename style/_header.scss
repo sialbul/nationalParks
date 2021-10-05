@@ -1,0 +1,23 @@
+.navbar{
+    background-color: $darkblue;
+    padding: 5px;
+    color:$lightblue;
+    border-bottom: 2px solid $lightblue;
+    position: fixed;
+    width: 100%;
+   
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        align-items: center;
+
+  }
+   
+}
+
+#logo{
+    width: 15vh;
+    height: 15vh;
+    
+}

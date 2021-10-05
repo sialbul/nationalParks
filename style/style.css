@@ -5,19 +5,6 @@
   font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: 'didact_gothicregular', Arial, sans-serif;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#083c5a), color-stop(#375b76), color-stop(#5d7c93), color-stop(#849fb2), color-stop(#acc3d1), color-stop(#aacfdf), color-stop(#a6dbeb), color-stop(#a2e8f4), to(#6bdfdd));
-  background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd);
-}
-
 .navbar {
   background-color: #083C5A;
   padding: 5px;
@@ -44,18 +31,10 @@ body {
   height: 15vh;
 }
 
-#logoFooter {
-  width: 8vh;
-  height: 8vh;
-}
-
-section {
-  min-height: 100vh;
-}
-
 footer {
   background-color: #083C5A;
   color: #E4F4FD;
+  padding: 15px 5px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto auto;
@@ -67,6 +46,11 @@ footer {
   border-top: 2px solid #E4F4FD;
 }
 
+#logoFooter {
+  width: 8vh;
+  height: 8vh;
+}
+
 #footerCopyRight {
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -74,23 +58,51 @@ footer {
 }
 
 #footerRights {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 #footerTitle {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 4;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+#footerTitle img {
+  margin-right: 15px;
+}
+
 #footerSocial {
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-  grid-column-end: 5;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#footerSocial i {
+  margin-right: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'didact_gothicregular', Arial, sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#083c5a), color-stop(#375b76), color-stop(#5d7c93), color-stop(#849fb2), color-stop(#acc3d1), color-stop(#aacfdf), color-stop(#a6dbeb), color-stop(#a2e8f4), to(#6bdfdd));
+  background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd);
+}
+
+#topSection {
+  min-height: 100vh;
+  background-image: url("../img/california.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
