@@ -23,20 +23,20 @@
                 </li>
                 <li>
                     <label for="parks">Choose a park:</label>
-                    <select id="parks" name="parks">
-                      <option value="california">California</option>
-                      <option value="ohio">Ohio</option>
-                      <option value="florida">Florida</option>
+                    <select id="parks" name="parks" onchange="fetchData()">
+                      <option value="ca" >California</option>
+                      <option value="oh">Ohio</option>
+                      <option value="fl">Florida</option>
                     </select>               
                  </li>
-            </ul>
+                </ul>
         </div>
     </header>
     <section id="topSection">
 
     </section>
-    <section>
-        <div>National Parks</div>
+    <section id="bottomSection">
+
     </section>
     <footer>
         <div id="footerRights">
@@ -55,8 +55,9 @@
             <i class="fa fa-instagram" aria-hidden="true"></i>
         </div>
         </footer>
+        <script src="/api.js"></script>
+
     <script src="/index.js"></script>
-    <script type='text/javascript' src='./config.js'></script>
 </body>
 
 </html>

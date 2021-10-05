@@ -105,4 +105,23 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#bottomSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  padding: 20px;
+}
+
+.card {
+  border: 5px solid #E4F4FD;
+  background-color: #E4F4FD;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+}
 /*# sourceMappingURL=style.css.map */
