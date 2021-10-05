@@ -13,15 +13,18 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#083c5a), color-stop(#375b76), color-stop(#5d7c93), color-stop(#849fb2), color-stop(#acc3d1), color-stop(#aacfdf), color-stop(#a6dbeb), color-stop(#a2e8f4), color-stop(#6bdfdd), color-stop(#3bd4b7), color-stop(#32c785), to(#4cb648));
-  background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd, #3bd4b7, #32c785, #4cb648);
+  font-family: 'didact_gothicregular', Arial, sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#083c5a), color-stop(#375b76), color-stop(#5d7c93), color-stop(#849fb2), color-stop(#acc3d1), color-stop(#aacfdf), color-stop(#a6dbeb), color-stop(#a2e8f4), to(#6bdfdd));
+  background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd);
 }
 
 .navbar {
-  font-family: 'didact_gothicregular', Arial, sans-serif;
   background-color: #083C5A;
   padding: 5px;
   color: #E4F4FD;
+  border-bottom: 2px solid #E4F4FD;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar ul {
@@ -36,8 +39,58 @@ body {
           align-items: center;
 }
 
-.navbar img {
+#logo {
   width: 15vh;
   height: 15vh;
+}
+
+#logoFooter {
+  width: 8vh;
+  height: 8vh;
+}
+
+section {
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #083C5A;
+  color: #E4F4FD;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-top: 2px solid #E4F4FD;
+}
+
+#footerCopyRight {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#footerRights {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#footerTitle {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footerSocial {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 5;
 }
 /*# sourceMappingURL=style.css.map */

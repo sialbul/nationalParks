@@ -5,14 +5,17 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd, #3bd4b7, #32c785, #4cb648);
+    font-family: 'didact_gothicregular', Arial, sans-serif;;
+    background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd);
 }
 
 .navbar{
-    font-family: 'didact_gothicregular', Arial, sans-serif;;
     background-color: $darkblue;
     padding: 5px;
     color:$lightblue;
+    border-bottom: 2px solid $lightblue;
+    position: fixed;
+    width: 100%;
    
     ul {
         display: flex;
@@ -21,8 +24,49 @@ body{
         align-items: center;
 
   }
-    img{
-        width: 15vh;
-        height: 15vh;
-    }
+   
+}
+
+#logo{
+    width: 15vh;
+    height: 15vh;
+    
+}
+
+#logoFooter{
+    width: 8vh;
+    height: 8vh;
+}
+section{
+    min-height: 100vh;
+
+}
+
+footer{
+    background-color: $darkblue;
+    color:$lightblue;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid $lightblue;
+
+}
+
+#footerCopyRight{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#footerRights{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#footerTitle{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display:flex;
+}
+#footerSocial{
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
