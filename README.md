@@ -5,7 +5,7 @@ The webpage has been designed as responsive.
 
 ## Features
 
- * Designed the logo, used as favicon and, logo at the header.
+ * Designed the logo, used as favicon and, as logo at the header.
  * The header section has been created by logo, page title and select option for the states. As default, it shows California's name, weather and national parks. 
  * The hero section has a background image and the weather card on the top. The weather card shows the current state's name, current weather with temperature, humidity and wind speed.
  * A maximum of 12 National Parks of each state's data has been fetched which displays maximum 3 of them in a each row. 
