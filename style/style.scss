@@ -22,7 +22,7 @@ body{
 }
 .weatherCard{
     min-width: 50vh;
-    max-height: 40vh;
+    max-height: 50vh;
     background-color:$yellow ;
     color: $black;
     position: absolute;
@@ -37,6 +37,7 @@ body{
 }
 #nameState{
     font-size: 2em;
+    line-height: 2em;
 }
 .symbols{
     display: flex;
@@ -44,6 +45,8 @@ body{
 }
 #nameBig{
     font-size: 2em;
+    color: $green;
+
 }
 #bottomSection{
     display: grid;
@@ -52,12 +55,17 @@ body{
     padding: 30px 20px;
     margin-top: 20px;
 }
+#activity{
+    padding: 5px;
+}
+
+.cardTop{
+    padding: 5px;
+}
 .card{
-    border: 5px solid $lightblue3;
+    border: 1px solid $green;
     background-color: $lightblue2;
     border-radius: 5px;
-    padding: 10px;
-    text-align:justify;
     img{
         width: 100%;
         height: 200px;
@@ -75,25 +83,32 @@ body{
 }
 
 @media screen and (max-width: 1280px) {
-    .bottomSection{
+    #bottomSection{
         grid-template-columns: 1fr 1fr;
       
     }
-}
-@media screen and (max-width: 769px) {
-    #bottomSection{
-        grid-template-columns: 1fr ;
-    }
     #hero{
-        height: 100vh;
+        min-height: 80vh;
+    }
+    .weatherCard{
+        min-height: 50vh;
+    }
+}
+@media screen and (max-width: 767px) {
+    #bottomSection{
+        grid-template-columns: 1fr;
+    }
+    
+    #hero{
+        min-height: 100vh;
     }
     #nameBig{
         font-size: 1.5em;
     }
     .weatherCard{
-        top:45%;
+        top:40%;
         min-width: 35vh;
-        min-height: 45vh;
+        min-height: 54vh;
     }
 }
 @media screen and (max-width: 360px) {

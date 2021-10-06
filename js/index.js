@@ -1,4 +1,5 @@
 const convertGPS = (deg, dir) => Math.abs(parseFloat(deg)).toFixed(3) + ' ' + (dir === 'latitude' ? deg >= 0 ? 'N' : 'S' : deg >= 0 ? 'E' : 'W');
+
 document.getElementById("state").innerHTML = stateList.map(state => `<option data-name="${state.name}" value="${state.value}" ${state.value === 'ca' && 'selected=selected'}>${state.name}</option>`).join('');
 
 function renderData(data) {
@@ -11,8 +12,8 @@ function renderData(data) {
                 <div>
                     <img class="image" src="${park.images[0].url}" alt="${park.images[0].altText}" />
                 </div>
-                <h2>${park.fullName}</h2>
-                <p class=description>${park.description}</p>
+                <h2 class="name cardTop">${park.fullName}</h2>
+                <p class="description cardTop">${park.description}</p>
                 <hr/>
                 <div id="activity">
                     <h3>
@@ -48,7 +49,8 @@ function renderWeatherData(dataWeather) {
 
     let mappedDivWeather= `
     <div class="weatherCard">
-        <h1 id="nameState">Welcome to <br/><span id="nameBig">${dataWeather.name}</span> parks!</h1>
+        <h1 id="nameState">Welcome to <br/>
+         <span id="nameBig">${dataWeather.name}</span> parks!</h1>
         <div class="weatherSec">
             <h3> Today's weather</h3>
             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.weather[0].icon}.png"></span>
