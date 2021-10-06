@@ -6,7 +6,6 @@
     position: fixed;
     width: 100%;
     z-index: 5;
-   
     ul {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -15,37 +14,37 @@
         li{
             text-align: center;
         }
-  }
+    }
 }
 
 #logo{
-    width: 15vh;
-    height: 15vh;
-    
+    width: 12vh;
+    height: 12vh;
 }
 
 #dropDownList{
 font-size: 3vh;
-select{
+    select{
     font-size: 3vh;
-
+   }
 }
-}
-
 
 @media screen and (max-width: 769px) {
+    #logo{
+        width: 10vh;
+        height: 10vh;
+    }
     #dropDownList{
         font-size: 3vh;
         select{
             font-size: 2vh;
-        
         }
-        }
-        .navbar{
-
+    }
+    .navbar{
         ul {
             display: grid;
             grid-template-columns: auto;
             text-align: center;
-        }}
+        }
+    }
 }

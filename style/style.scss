@@ -1,75 +1,75 @@
 @import "_variable";
 @import "_header";
 @import "_footer";
+
 *{
     margin :0;
     padding:0;
     box-sizing: border-box;
 }
 body{
-    font-family: 'didact_gothicregular', Arial, sans-serif;;
-    background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd);
+    font-family: 'didact_gothicregular', Arial, sans-serif;
+    background-color: $white;
 }
 
-.topSection{
-    min-height: 100vh;
+#hero{
+    height: 70vh;
     background-image: url("../img/back3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border-bottom:2px solid $lightblue ;
 }
 .weatherCard{
-    width: 80%;
-    height: 40vh;
-    background-color:$darkgreen;
-    color: $lightblue;
+    min-width: 50vh;
+    max-height: 40vh;
+    background-color:$yellow ;
+    color: $black;
     position: absolute;
     top: 30%;
-    left:10%;
+    left: 15%;
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
     align-items: center;
+    line-height: 2.5em;
+    border-radius: 40px 0 0 0;
+    box-shadow:5px 5px 5px $lightblue;
 }
 #nameState{
     font-size: 2em;
 }
-
-
+.symbols{
+    display: flex;
+    justify-content: space-around;
+}
+#nameBig{
+    font-size: 2em;
+}
 #bottomSection{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 45px;
     padding: 30px 20px;
+    margin-top: 20px;
 }
-
 .card{
-    border: 5px solid $lightblue;
-    background-color: $lightblue;
-    text-align: center;
+    border: 5px solid $lightblue3;
+    background-color: $lightblue2;
+    border-radius: 5px;
+    padding: 10px;
+    text-align:justify;
     img{
         width: 100%;
         height: 200px;
         object-fit: cover;
     }
 }
-
-#activity{
-    h3,p,a{
-        text-align: left;
-    }
-    ul{
-        list-style-type: none;
-
-    }
-}
-
 #linkPage{
     a{
     text-decoration: none;
     color:$black;
     &:hover{
-color:$red;
+        color:$red;
     }
   }
 }
@@ -80,16 +80,31 @@ color:$red;
       
     }
 }
-
-
 @media screen and (max-width: 769px) {
-    .bottomSection{
+    #bottomSection{
         grid-template-columns: 1fr ;
-      
     }
-
+    #hero{
+        height: 100vh;
+    }
+    #nameBig{
+        font-size: 1.5em;
+    }
     .weatherCard{
-        top:40%;
+        top:45%;
+        min-width: 35vh;
+        min-height: 45vh;
     }
+}
+@media screen and (max-width: 360px) {
+    .weatherCard{
+        top:35%;
+        left:10%;
+        min-width: 35vh;
+        min-height: 60vh;
+    }
+    #hero{
+       min-height: 100vh;
 
+    }
 }

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./img/national parks.png" />
     <script src="https://use.fontawesome.com/a43765b71a.js"></script>
+    <script src="https://kit.fontawesome.com/87e1754598.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./style/style.css">
     <title>California National Parks</title>
 </head>
@@ -23,6 +25,7 @@
                 </li>
                 <li id="dropDownList">
                     <label for="state">
+                        <h4>Select the state:</h4>
                         <select id="state" onchange="fetchData()">
                         </select>
                     </label>
@@ -30,44 +33,35 @@
             </ul>
         </div>
     </header>
-    <section class="topSection">
-        <div class="weatherCard">
-            <p id="nameState"></p>
-            <img id="iconDiv" src=""></span>
-            <h3 id="description"></h3>
-            <h1 id="temp"></h1>
+    <main>
+        <section id="hero">
+        </section>
+        <section id="bottomSection">
+        </section>
+    </main>
 
-            <h3 id="humidity"></h3>
-            <h3 id="wind"></h3>
-            <h2 id="arrow"></h2>
-        </div>
-    </section>
-    <section id="bottomSection">
-
-    </section>
     <footer>
         <div class="footerRights">
-            Terms & Conditions | Privacy Policy
+            <a href="./index.html"> Terms & Conditions </a>|
+            <a href="./index.html"> Privacy Policy </a>
         </div>
         <div class="footerCopyRight">
             &#169; Copyright 2021 by M.Sibel Baslamisli.
         </div>
-
         <div class="footerTitle">
             <img id="logoFooter" src="./img/national parks.png" alt="logo">
             <h1>NATIONAL PARKS</h1>
         </div>
         <div class="footerSocial">
-            <a href="https://www.facebook.com/nationalparkservice"> <i class="fa fa-facebook"
+            <a href="https://www.facebook.com/nationalparkservice" target="_blank"> <i class="fa fa-facebook"
                     aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/nationalparkservice/"> <i class="fa fa-instagram"
+            <a href="https://www.instagram.com/nationalparkservice/" target="_blank"> <i class="fa fa-instagram"
                     aria-hidden="true"></i></a>
         </div>
     </footer>
-    <script src="./js/api.js"></script>
     <script src="./js/state.js"></script>
-
     <script src="./js/index.js"></script>
+    <script src="./js/api.js"></script>
 </body>
 
 </html>
