@@ -1,23 +1,50 @@
 .navbar{
     background-color: $darkblue;
-    padding: 5px;
+    padding: 2vh;
     color:$lightblue;
     border-bottom: 2px solid $lightblue;
     position: fixed;
     width: 100%;
    
     ul {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: auto auto auto;
         list-style-type: none;
         align-items: center;
-
+        li{
+            text-align: center;
+        }
   }
-   
 }
 
 #logo{
     width: 15vh;
     height: 15vh;
     
+}
+
+#dropDownList{
+font-size: 3vh;
+select{
+    font-size: 3vh;
+
+}
+}
+
+
+@media screen and (max-width: 769px) {
+    #dropDownList{
+        font-size: 3vh;
+        select{
+            font-size: 2vh;
+        
+        }
+        }
+        .navbar{
+
+        ul {
+            display: grid;
+            grid-template-columns: auto;
+            text-align: center;
+        }}
 }

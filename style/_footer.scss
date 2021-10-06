@@ -25,7 +25,8 @@ footer{
 #footerTitle{
     grid-column-start: 2;
     grid-column-end: 3;
-    display:flex;
+    display: flex;
+
     img{
         margin-right: 15px;
     }
@@ -33,9 +34,59 @@ footer{
 #footerSocial{
     grid-column-start: 3;
     grid-column-end: 4;
-i{
+    a{
+        color: $lightblue;
+            &:hover{
+                color:$red;
+        }
+    }
+    i{
     margin-right: 10px;
+    }
 }
 
+
+
+@media screen and (max-width: 770px) {
+    #bottomSection{
+        grid-template-columns: 1fr ;
+      
+    }
+
+    #footer{
+        grid-template-columns: auto;
+        text-align: center;
+
+    }
+
+    #footerCopyRight{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        align-items: flex-end;
+    }
+    #footerRights{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        align-items: flex-end;
+
+
+    }
+    #footerTitle{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+       
+    }
+    #footerSocial{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
 
 }

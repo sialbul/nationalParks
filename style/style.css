@@ -7,7 +7,7 @@
 
 .navbar {
   background-color: #083C5A;
-  padding: 5px;
+  padding: 2vh;
   color: #E4F4FD;
   border-bottom: 2px solid #E4F4FD;
   position: fixed;
@@ -15,20 +15,47 @@
 }
 
 .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   list-style-type: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.navbar ul li {
+  text-align: center;
+}
+
 #logo {
   width: 15vh;
   height: 15vh;
+}
+
+#dropDownList {
+  font-size: 3vh;
+}
+
+#dropDownList select {
+  font-size: 3vh;
+}
+
+@media screen and (max-width: 769px) {
+  #dropDownList {
+    font-size: 3vh;
+  }
+  #dropDownList select {
+    font-size: 2vh;
+  }
+  .navbar ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    text-align: center;
+  }
 }
 
 footer {
@@ -82,8 +109,66 @@ footer {
   grid-column-end: 4;
 }
 
+#footerSocial a {
+  color: #E4F4FD;
+}
+
+#footerSocial a:hover {
+  color: red;
+}
+
 #footerSocial i {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 770px) {
+  #bottomSection {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #footer {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    text-align: center;
+  }
+  #footerCopyRight {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+    grid-row-end: 4;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #footerRights {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 4;
+        grid-row-start: 4;
+    grid-row-end: 5;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #footerTitle {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #footerSocial {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
 
 * {
@@ -101,7 +186,6 @@ body {
 
 #topSection {
   min-height: 100vh;
-  background-image: url("../img/california.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -112,16 +196,50 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .card {
   border: 5px solid #E4F4FD;
   background-color: #E4F4FD;
+  text-align: center;
 }
 
 .card img {
   width: 100%;
   height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#activity h3, #activity p, #activity a {
+  text-align: left;
+}
+
+#activity ul {
+  list-style-type: none;
+}
+
+#linkPage a {
+  text-decoration: none;
+  color: black;
+}
+
+#linkPage a:hover {
+  color: red;
+}
+
+@media screen and (max-width: 1280px) {
+  #bottomSection {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #bottomSection {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

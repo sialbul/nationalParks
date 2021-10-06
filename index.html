@@ -21,18 +21,23 @@
                 <li>
                     <h1>NATIONAL PARKS</h1>
                 </li>
-                <li>
-                    <label for="parks">Choose a park:</label>
+                <li id="dropDownList">
+                    <label for="parks">Choose the state:</label>
                     <select id="parks" name="parks" onchange="fetchData()">
-                      <option value="ca" >California</option>
-                      <option value="oh">Ohio</option>
-                      <option value="fl">Florida</option>
-                    </select>               
-                 </li>
-                </ul>
+                        <option value="ca">California</option>
+                        <option value="oh">Ohio</option>
+                        <option value="fl">Florida</option>
+                        <option value="il">Illinois</option>
+                        <option value="in">Indiana</option>
+                    </select>
+                </li>
+            </ul>
         </div>
     </header>
     <section id="topSection">
+
+    </section>
+    <section id="latter">
 
     </section>
     <section id="bottomSection">
@@ -45,17 +50,19 @@
         <div id="footerCopyRight">
             &#169; Copyright 2021 by M.Sibel Baslamisli.
         </div>
-       
+
         <div id="footerTitle">
             <img id="logoFooter" src="./img/national parks.png" alt="logo">
             <h1>NATIONAL PARKS</h1>
         </div>
         <div id="footerSocial">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <a href="https://www.facebook.com/nationalparkservice"> <i class="fa fa-facebook"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/nationalparkservice/"> <i class="fa fa-instagram"
+                    aria-hidden="true"></i></a>
         </div>
-        </footer>
-        <script src="/api.js"></script>
+    </footer>
+    <script src="/api.js"></script>
 
     <script src="/index.js"></script>
 </body>
