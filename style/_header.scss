@@ -5,6 +5,7 @@
     border-bottom: 2px solid $lightblue;
     position: fixed;
     width: 100%;
+    z-index: 5;
    
     ul {
         display: grid;

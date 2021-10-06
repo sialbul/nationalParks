@@ -11,17 +11,35 @@ body{
     background-image: linear-gradient(to bottom, #083c5a, #375b76, #5d7c93, #849fb2, #acc3d1, #aacfdf, #a6dbeb, #a2e8f4, #6bdfdd);
 }
 
-#topSection{
+.topSection{
     min-height: 100vh;
+    background-image: url("../img/back3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
+    position: relative;
 }
+.weatherCard{
+    width: 80%;
+    height: 40vh;
+    background-color:$darkgreen;
+    color: $lightblue;
+    position: absolute;
+    top: 30%;
+    left:10%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+#nameState{
+    font-size: 2em;
+}
+
 
 #bottomSection{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 25px;
+    grid-gap: 35px;
     padding: 30px 20px;
 }
 
@@ -57,7 +75,7 @@ color:$red;
 }
 
 @media screen and (max-width: 1280px) {
-    #bottomSection{
+    .bottomSection{
         grid-template-columns: 1fr 1fr;
       
     }
@@ -65,9 +83,13 @@ color:$red;
 
 
 @media screen and (max-width: 769px) {
-    #bottomSection{
+    .bottomSection{
         grid-template-columns: 1fr ;
       
+    }
+
+    .weatherCard{
+        top:40%;
     }
 
 }
