@@ -266,6 +266,10 @@ body {
   padding: 5px;
 }
 
+.name.cardTop {
+  text-align: center;
+}
+
 .card {
   border: 1px solid #105710;
   background-color: #e4f4fdab;
@@ -323,11 +327,14 @@ body {
   .weatherCard {
     top: 35%;
     left: 10%;
-    min-width: 35vh;
+    min-width: 80%;
     min-height: 60vh;
   }
   #hero {
     min-height: 100vh;
+  }
+  #nameBig {
+    font-size: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */
