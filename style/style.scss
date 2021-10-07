@@ -95,8 +95,8 @@ body{
         min-height: 80vh;
     }
     .weatherCard{
-        min-height: 40vh;
-        top:40%;
+        min-height: 55vh;
+        top:28%;
     }
 }
 @media screen and (max-width: 767px) {
@@ -112,20 +112,18 @@ body{
     }
     .weatherCard{
         top:40%;
-        min-width: 35vh;
-        min-height: 54vh;
+        max-width: 90%;
+        left:5%;
+        min-height: 55vh;
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
     .weatherCard{
         top:35%;
-        left:10%;
-        min-width: 80%;
-        min-height: 60vh;
+        min-height: 40vh;
     }
     #hero{
        min-height: 100vh;
-
     }
     #nameBig{
         font-size: 1em;
