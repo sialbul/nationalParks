@@ -48,11 +48,12 @@
     width: 10vh;
     height: 10vh;
   }
-  #dropDownList {
-    font-size: 3vh;
-  }
   #dropDownList select {
     font-size: 2vh;
+  }
+  #dropDownList label h4 {
+    float: left;
+    margin-left: 15%;
   }
   .navbar ul {
     display: -ms-grid;
@@ -60,6 +61,13 @@
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #dropDownList label h4 {
+    float: none;
+    margin-left: 0px;
   }
 }
 

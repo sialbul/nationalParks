@@ -35,9 +35,12 @@ font-size: 3vh;
         height: 10vh;
     }
     #dropDownList{
-        font-size: 3vh;
         select{
             font-size: 2vh;
+        }
+        label h4{
+            float: left;
+            margin-left: 15%;
         }
     }
     .navbar{
@@ -46,5 +49,13 @@ font-size: 3vh;
             grid-template-columns: auto;
             text-align: center;
         }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #dropDownList label h4{
+            float:none;
+            margin-left: 0px;
+        
     }
 }
