@@ -282,9 +282,11 @@ body {
 }
 
 .card {
-  border: 1px solid #105710;
+  border: 2px solid #105710;
   background-color: #e4f4fdab;
   border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px #083C5A;
+          box-shadow: 5px 5px 5px #083C5A;
 }
 
 .card img {
