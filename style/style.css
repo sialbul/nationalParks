@@ -223,8 +223,8 @@ body {
 }
 
 .weatherCard {
-  min-width: 50vh;
-  max-height: 50vh;
+  min-width: 40vh;
+  min-height: 40vh;
   background-color: #FCC72C;
   color: black;
   position: absolute;
@@ -312,15 +312,11 @@ body {
         grid-template-columns: 1fr 1fr;
   }
   #hero {
-    min-height: 80vh;
-  }
-  .weatherCard {
-    min-height: 55vh;
-    top: 28%;
+    min-height: 90vh;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   #bottomSection {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -332,23 +328,22 @@ body {
     font-size: 1.5em;
   }
   .weatherCard {
-    top: 40%;
-    max-width: 90%;
-    left: 5%;
-    min-height: 55vh;
+    top: 35%;
+    left: 20%;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .weatherCard {
-    top: 35%;
-    min-height: 40vh;
-  }
-  #hero {
-    min-height: 100vh;
-  }
   #nameBig {
     font-size: 1em;
+  }
+  .weatherCard {
+    top: 33%;
+    left: 5%;
+    max-width: 90%;
+  }
+  .symbols {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
