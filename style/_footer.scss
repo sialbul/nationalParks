@@ -59,14 +59,13 @@ footer{
         grid-template-columns: 1fr ;
       
     }
-
     footer{
         grid-template-columns: auto;
         text-align: center;
-        
-
     }
-
+    .footSection{
+        margin: 5px 0px;
+    }
     .footerCopyRight{
         grid-column-start: 1;
         grid-column-end: 5;
@@ -81,7 +80,6 @@ footer{
         grid-row-end: 5;
         align-items: flex-end;
 
-
     }
     .footerTitle{
         grid-column-start: 1;
@@ -89,10 +87,9 @@ footer{
         grid-row-start: 1;
         grid-row-end: 2;
         img{
-            float: none;
+        display: none;
         }
-       
-    }
+   }
     .footerSocial{
         grid-column-start: 1;
         grid-column-end: 5;

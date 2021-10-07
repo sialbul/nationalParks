@@ -147,6 +147,9 @@ footer {
         grid-template-columns: auto;
     text-align: center;
   }
+  .footSection {
+    margin: 5px 0px;
+  }
   .footerCopyRight {
     -ms-grid-column: 1;
         grid-column-start: 1;
@@ -178,7 +181,7 @@ footer {
     grid-row-end: 2;
   }
   .footerTitle img {
-    float: none;
+    display: none;
   }
   .footerSocial {
     -ms-grid-column: 1;
