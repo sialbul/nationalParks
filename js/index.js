@@ -4,7 +4,7 @@ document.getElementById("state").innerHTML = stateList.map(state => `<option dat
 
 function renderData(data) {
     if (!data) return;
-
+    scroll(0, 0);
     let mappedDiv = '';
     data.data.map(park => {
         mappedDiv +=
@@ -47,7 +47,7 @@ renderData();
 function renderWeatherData(dataWeather) {
     if (!dataWeather) return;
 
-    let mappedDivWeather= `
+    let mappedDivWeather = `
     <div class="weatherCard">
         <h1 id="nameState">Welcome to <br/>
          <span id="nameBig">${dataWeather.name}</span> parks!</h1>
