@@ -1,16 +1,15 @@
 const convertGPS = (deg, dir) => Math.abs(parseFloat(deg)).toFixed(3) + ' ' + (dir === 'latitude' ? deg >= 0 ? 'N' : 'S' : deg >= 0 ? 'E' : 'W');
 
-document.getElementById("state").innerHTML = stateList.map(state => `<option data-name="${state.name}" value="${state.value}" ${state.value === 'ca' && 'selected=selected'}>${state.name}</option>`).join('');
-
 function renderData(data) {
     if (!data) return;
     scroll(0, 0);
     let mappedDiv = '';
     data.data.map(park => {
+
         mappedDiv +=
             `<div class="card">
                 <div>
-                    <img class="image" src="${park.images[0].url}" alt="${park.images[0].altText}" />
+                ${park.images[0]?.url ? `<img class="image" src="${park.images[0].url}" alt="${park.images[0].altText}" />` : 'src="./img/back3.jpg"'}
                 </div>
                 <h2 class="name cardTop">${park.fullName}</h2>
                 <p class="description cardTop">${park.description}</p>
@@ -20,9 +19,10 @@ function renderData(data) {
                         <i class="fa fa-tree" aria-hidden="true"></i>
                         Activities
                     </h3>
-                    <p>
-                        ${park.activities.slice(0, 3).map(a => a.name).join(', ')}
-                    </p>
+                    <ul id="activites">
+                      ${park.activities?.length > 0 ? `${park.activities.slice(0, 3).map(a =>`<li>${a.name}</li>`).join(' ')}` : '<p>No activities are available</p>'}
+
+                    </ul>
                     <hr/>
                     <h3>
                         <i class="fa fa-map-pin" aria-hidden="true"></i>
@@ -66,3 +66,6 @@ function renderWeatherData(dataWeather) {
     document.getElementById('hero').innerHTML = mappedDivWeather;
 }
 renderWeatherData();
+
+
+document.getElementById("year").innerHTML = new Date().getFullYear();

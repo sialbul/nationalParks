@@ -274,6 +274,10 @@ body {
   padding-bottom: 15px;
 }
 
+#activites {
+  list-style-type: none;
+}
+
 .cardTop {
   padding: 5px;
 }

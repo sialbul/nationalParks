@@ -1,7 +1,6 @@
 @import "_variable";
 @import "_header";
 @import "_footer";
-@import "_scrollUp";
 
 *{
     margin :0;
@@ -59,7 +58,10 @@ body{
     text-align: center;
     padding-bottom: 15px;
 }
+#activites{
+    list-style-type: none;
 
+}
 .cardTop{
     padding: 5px;
 }
