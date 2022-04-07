@@ -353,6 +353,7 @@ body {
     top: 35%;
     left: 15%;
     width: 95%;
+    font-size: 0.9em;
   }
   .weatherSec {
     margin-right: 20px;
@@ -369,6 +370,8 @@ body {
   }
   .weatherCard {
     top: 28%;
+    left: 5%;
+    min-width: 250px;
   }
   .symbols {
     display: block;
