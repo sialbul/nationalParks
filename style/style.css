@@ -354,20 +354,27 @@ body {
     left: 15%;
     width: 90%;
   }
+  .weatherSec {
+    margin-right: 20px;
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (max-width: 414px) {
-  #hero {
-    width: 100vh;
-  }
   #nameBig {
     font-size: 1em;
   }
+  #nameState {
+    font-size: 1.3em;
+  }
   .weatherCard {
-    top: 33%;
+    top: 28%;
   }
   .symbols {
     display: block;
+  }
+  .weatherSec {
+    margin: 0px 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
