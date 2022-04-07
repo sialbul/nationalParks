@@ -22,12 +22,12 @@ body {
 }
 
 .weatherCard {
-    min-width: 50%;
+    max-width: 70%;
     background-color: $yellow;
     color: $black;
     position: absolute;
     top: 30%;
-    left: 15%;
+    left: 30%;
     padding: 10px;
     text-align: center;
     align-items: center;
@@ -38,8 +38,12 @@ body {
 
 .symbolCard {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.weatherSec {
+    margin-right: 20px;
 }
 
 #nameState {
@@ -129,7 +133,8 @@ body {
     }
     .weatherCard {
         top: 35%;
-        left: 5%;
+        left: 15%;
+        width: 90%;
     }
 }
 
@@ -142,8 +147,6 @@ body {
     }
     .weatherCard {
         top: 33%;
-        left: 5%;
-        width: 90%;
     }
     .symbols {
         display: block;

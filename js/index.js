@@ -37,23 +37,24 @@ function renderWeatherData(dataWeather) {
     let weatherPart;
     const stateCode = document.getElementById("state").value;
     const stateName = document.querySelector(`[value=${stateCode}]`).getAttribute('data-name');
- 
+
     let namePart = `<h1 id="nameState">Welcome to <br/>
     <span id="nameBig">${stateName}</span> parks!</h1>
     <h3>Weather forecast for the next 5 days... </h3>`;
 
-    for(let i=4;i<dataWeather.list.length;i+=8){
-    
-    var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/'));
+    for(let i=0;i<dataWeather.list.length;i+=8){
+        if(new Date(dataWeather.list[i].dt_txt).getHours()==15){ //getting the weather forecast at 3pm 
+
+            var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/')); //fixing invalid date
   
-    weatherPart= `<div class="weatherSec">
+            weatherPart= `<div class="weatherSec">
                             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.list[i].weather[0].icon}.png">
                             <h3 id="description">${dataWeather.list[i].weather[0].description}</h3>
                             <h3>${date.toLocaleDateString('en-US')}</h3>
                       </div>`
-    mappedDivWeather.push(weatherPart);
-    };
-    let weatherList = `  <div class="weatherCard">
+            mappedDivWeather.push(weatherPart);
+            };
+            let weatherList = `  <div class="weatherCard">
                                 ${namePart}
                                 <div class="symbolCard">
                                     ${mappedDivWeather[0]}
@@ -64,8 +65,9 @@ function renderWeatherData(dataWeather) {
                                 </div>
                             </div>   
                         `;
-    document.getElementById('hero').innerHTML = weatherList;
-}
+            document.getElementById('hero').innerHTML = weatherList;
+        }
+    }
 renderWeatherData();
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
