@@ -44,12 +44,8 @@ function renderWeatherData(dataWeather) {
 
     for(let i=4;i<dataWeather.list.length;i+=8){
     
-    var dateStamp = Date.parse(dataWeather.list[i].dt_txt);
-    var date;
-    if (isNaN(dateStamp) == false) {
-        date = new Date(dateStamp);
-      }
-
+    var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/'));
+  
     weatherPart= `<div class="weatherSec">
                             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.list[i].weather[0].icon}.png">
                             <h3 id="description">${dataWeather.list[i].weather[0].description}</h3>
