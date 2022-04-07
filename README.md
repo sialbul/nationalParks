@@ -7,7 +7,7 @@ The webpage has been designed as responsive.
 
  * Designed the logo, used as favicon and, as logo at the header.
  * The header section has been created by logo, page title and select option for the states. As default, it shows California's name, weather and national parks. 
- * The hero section has a background image and the weather card on the top. The weather card shows the current state's name, current weather with temperature, humidity and wind speed.
+ * The hero section has a background image and the weather card on the top. The weather card shows the current state's name, temperatures of each day.
  * A maximum of 12 National Parks of each state's data has been fetched which displays maximum 3 of them in a each row. 
  * In each of national parks card has the park's name, park's image, park coordinates in the format "43.496 N 70.449 W", first three top activities and there is a link to park page on National Park Service website. 
  * The footer section has been built with 4 sections including copyright year, legal links (privacy policy, term and conditions), page title, social links.
