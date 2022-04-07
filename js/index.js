@@ -43,15 +43,24 @@ function renderWeatherData(dataWeather) {
     <h3>Weather forecast for the next 5 days... </h3>`;
 
     for(let i=4;i<dataWeather.list.length;i+=8){
-        var date =new Date(dataWeather.list[i].dt_txt);
-        weatherPart= `<div class="weatherSec">
+    
+    //date.toLocalString able to work different 
+    var options = {
+        weekday: "short",
+        year: "numeric",
+        month: "2-digit",
+        day: "numeric"
+    };
+
+    var date =new Date(dataWeather.list[i].dt_txt);
+    weatherPart= `<div class="weatherSec">
                             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.list[i].weather[0].icon}.png">
                             <h3 id="description">${dataWeather.list[i].weather[0].description}</h3>
-                            <h3>${date.toLocaleDateString('en-US')}</h3>
+                            <h3>${date.toLocaleString('en-US',options)}</h3>
                       </div>`
-        mappedDivWeather.push(weatherPart);
-        };
-        let weatherList = `  <div class="weatherCard">
+    mappedDivWeather.push(weatherPart);
+    };
+    let weatherList = `  <div class="weatherCard">
                                 ${namePart}
                                 <div class="symbolCard">
                                     ${mappedDivWeather[0]}
@@ -62,7 +71,7 @@ function renderWeatherData(dataWeather) {
                                 </div>
                             </div>   
                         `;
-        document.getElementById('hero').innerHTML = weatherList;
+    document.getElementById('hero').innerHTML = weatherList;
 }
 renderWeatherData();
 
