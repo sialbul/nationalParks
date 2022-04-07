@@ -44,19 +44,16 @@ function renderWeatherData(dataWeather) {
 
     for(let i=4;i<dataWeather.list.length;i+=8){
     
-    //date.toLocalString able to work different 
-    var options = {
-        weekday: "short",
-        year: "numeric",
-        month: "2-digit",
-        day: "numeric"
-    };
+    var dateStamp = Date.parse(dataWeather.list[i].dt_txt);
+    var date;
+    if (isNaN(dateStamp) == false) {
+        date = new Date(dateStamp);
+      }
 
-    var date =new Date(dataWeather.list[i].dt_txt);
     weatherPart= `<div class="weatherSec">
                             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.list[i].weather[0].icon}.png">
                             <h3 id="description">${dataWeather.list[i].weather[0].description}</h3>
-                            <h3>${date.toLocaleString('en-US',options)}</h3>
+                            <h3>${date.toLocaleDateString('en-US')}</h3>
                       </div>`
     mappedDivWeather.push(weatherPart);
     };
