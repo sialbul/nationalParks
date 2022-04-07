@@ -42,10 +42,8 @@ function renderWeatherData(dataWeather) {
     <span id="nameBig">${stateName}</span> parks!</h1>
     <h3>Weather forecast for the next 5 days... </h3>`;
 
-    for(let i=0;i<dataWeather.list.length;i+=8){
-        
+    for(let i=0;i<dataWeather.list.length;i++){
         var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/')); //fixing invalid date
-
         if(date.getHours() == 15){ //getting the weather forecast at 3pm 
   
             weatherPart= `<div class="weatherSec">
