@@ -46,7 +46,7 @@ function renderWeatherData(dataWeather) {
         
         var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/')); //fixing invalid date
 
-        if(date.getHours()==15){ //getting the weather forecast at 3pm 
+        if(date.getHours() == 15){ //getting the weather forecast at 3pm 
   
             weatherPart= `<div class="weatherSec">
                             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.list[i].weather[0].icon}.png">
