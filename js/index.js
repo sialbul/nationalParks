@@ -47,7 +47,7 @@ function renderWeatherData(dataWeather) {
         weatherPart= `<div class="weatherSec">
                             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.list[i].weather[0].icon}.png">
                             <h3 id="description">${dataWeather.list[i].weather[0].description}</h3>
-                            <h3>${date.toLocaleDateString()}</h3>
+                            <h3>${date.toLocaleDateString('en-US')}</h3>
                       </div>`
         mappedDivWeather.push(weatherPart);
         };
