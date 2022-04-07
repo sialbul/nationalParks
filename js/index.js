@@ -43,9 +43,10 @@ function renderWeatherData(dataWeather) {
     <h3>Weather forecast for the next 5 days... </h3>`;
 
     for(let i=0;i<dataWeather.list.length;i+=8){
-        if(new Date(dataWeather.list[i].dt_txt).getHours()==15){ //getting the weather forecast at 3pm 
+        
+        var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/')); //fixing invalid date
 
-            var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/')); //fixing invalid date
+        if(date.getHours()==15){ //getting the weather forecast at 3pm 
   
             weatherPart= `<div class="weatherSec">
                             <img id="iconDiv" src="https://openweathermap.org/img/wn/${dataWeather.list[i].weather[0].icon}.png">
