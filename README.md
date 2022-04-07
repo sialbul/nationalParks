@@ -1,6 +1,6 @@
 # National Parks
 
-The webpage for National Parks is a single page website that displays the first 12 national parks in USA from the National Park API. You can see the current weather of the selected state on the top of the page which fetching the data from Open Weather API. The page has been build by HTML, SASS, JavaScript. Google font - Didact has been added as the external font.
+The webpage for National Parks is a single page website that displays the first 12 national parks in USA from the National Park API. You can see the next 5 days weather of the selected state on the top of the page which fetching the data from Open Weather API. The page has been build by HTML, SASS, JavaScript. Google font - Didact has been added as the external font.
 The webpage has been designed as responsive.
 
 ## Features
