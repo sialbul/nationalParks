@@ -52,19 +52,16 @@ function renderWeatherData(dataWeather) {
                             <h3>${date.toLocaleDateString('en-US')}</h3>
                       </div>`
             mappedDivWeather.push(weatherPart);
-            };
-            let weatherList = `  <div class="weatherCard">
+        };
+
+        let weatherList = `<div class="weatherCard">
                                 ${namePart}
                                 <div class="symbolCard">
-                                    ${mappedDivWeather[0]}
-                                    ${mappedDivWeather[1]}
-                                    ${mappedDivWeather[2]}
-                                    ${mappedDivWeather[3]}
-                                    ${mappedDivWeather[4]}
+                                ${mappedDivWeather}
                                 </div>
                             </div>   
                         `;
-            document.getElementById('hero').innerHTML = weatherList;
+        document.getElementById('hero').innerHTML = weatherList;
         }
     }
 renderWeatherData();
