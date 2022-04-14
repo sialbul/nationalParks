@@ -8,6 +8,7 @@ async function fetchData() {
     const stateLat = document.querySelector(`[value=${stateCode}]`).getAttribute('lat');
     const stateLot = document.querySelector(`[value=${stateCode}]`).getAttribute('lot');
 
+
     const url = `https://developer.nps.gov/api/v1/parks?stateCode=${stateCode}&limit=12&api_key=`; //national park url 
     const urlWeather = `https://api.openweathermap.org/data/2.5/forecast?lat=${stateLat}&lon=${stateLot}&exclude=current,hourly,minutely,alerts&units=metric&appid=`; //weather api url
 

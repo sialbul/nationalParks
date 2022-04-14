@@ -31,6 +31,7 @@ function renderParkData(data) {
 }
 renderParkData();
 
+
 function renderWeatherData(dataWeather) {
     if (!dataWeather) return;
     let mappedDivWeather=[];
@@ -38,11 +39,15 @@ function renderWeatherData(dataWeather) {
     const stateCode = document.getElementById("state").value;
     const stateName = document.querySelector(`[value=${stateCode}]`).getAttribute('data-name');
 
+    const userWeather= document.getElementById('daysSelect').value;
+
     let namePart = `<h1 id="nameState">Welcome to <br/>
     <span id="nameBig">${stateName}</span> parks!</h1>
-    <h3>Weather forecast for the next 5 days... </h3>`;
+    <h3>Weather forecast for the next ${userWeather} days... </h3>`;
 
-    for(let i=0;i<dataWeather.list.length;i++){
+    const daysLength = (dataWeather.list.length)/5*userWeather;
+    for(let i=0;i<daysLength;i++){
+       
         var date =new Date((dataWeather.list[i].dt_txt).replace(/-/g,'/')); //fixing invalid date
         if(date.getHours() == 15){ //getting the weather forecast at 3pm 
   
@@ -57,7 +62,7 @@ function renderWeatherData(dataWeather) {
         let weatherList = `<div class="weatherCard">
                                 ${namePart}
                                 <div class="symbolCard">
-                                ${mappedDivWeather}
+                                ${mappedDivWeather.join("")}
                                 </div>
                             </div>   
                         `;
