@@ -20,6 +20,7 @@ async function fetchData() {
         const dataWeather = await responseWeather.json();
         renderWeatherData(dataWeather);
 
+
     } catch (error) {
         console.log(error)
     }
